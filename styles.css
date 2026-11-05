@@ -118,7 +118,7 @@ h1,h2,h3{font-family:Manrope,sans-serif}
 .contact-list a{color:#fff;font-weight:600}
 .contact-list a:hover{color:#b6d8d9}
 #contact .btn{color:var(--navy)!important}
-@media(max-width:460px){.contact-list li{flex-direction:column;gap:4px}}
+
 
 /* Hero portrait blended into the navy background */
 .hero-photo{position:absolute;right:max(48px,calc((100vw - var(--max))/2 + 40px));top:50%;transform:translateY(-54%);width:clamp(300px,31vw,430px);aspect-ratio:1;margin:0;z-index:0;border-radius:50%;overflow:hidden;box-shadow:0 0 0 1px #ffffff26,0 0 0 14px #ffffff0d,0 30px 70px #0000004d}
@@ -141,3 +141,21 @@ h1,h2,h3{font-family:Manrope,sans-serif}
 .contact-card .contact-list li:last-child{border-bottom:0}
 .contact-list em{font-style:normal;font-size:11px;color:#9ab4bc;margin-left:10px;letter-spacing:.08em}
 .contact-list address{font-style:normal;line-height:1.7;color:#d1e0e3}
+
+/* Small-screen hardening */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
+.status-dot{flex:none}
+.eyebrow{align-items:flex-start;line-height:1.6}
+.status-dot{margin-top:5px}
+@media(max-width:700px){
+  .hero h1{letter-spacing:-.035em}
+  .section h2{letter-spacing:-.03em}
+  .contact-card{padding:6px 20px 10px}
+  .contact-list li{flex-direction:column;gap:4px}
+  .contact-list li>span{flex:none;padding-top:0}
+  .contact-list em{margin-left:0}
+  #contact.section.container{padding:70px 24px}
+  .hero-bottom{font-size:10.5px}
+}
+@media(max-width:1000px){.hero:after{display:none}}
