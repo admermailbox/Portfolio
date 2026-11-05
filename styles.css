@@ -78,3 +78,37 @@ h1,h2,h3{font-family:Manrope,sans-serif}
 #experience .card h3,#experience .card p{overflow-wrap:break-word}
 @media(max-width:900px){#experience .card{grid-template-columns:minmax(210px,38%) minmax(0,1fr);column-gap:25px}}
 @media(max-width:700px){#experience .card{display:block}}
+
+/* Organized content + motion */
+.lead{font-size:clamp(20px,2.2vw,26px)!important;line-height:1.5!important;color:var(--navy)!important;font-weight:600;max-width:760px!important;margin:0 0 36px!important}
+.highlights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.highlight{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:6px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.highlight:hover{transform:translateY(-4px);border-color:#b1cfd1;box-shadow:0 14px 28px #172b3e12}
+.highlight strong{font:800 28px/1.1 Manrope,sans-serif;color:var(--accent);letter-spacing:-.03em}
+.highlight span{font-size:13px;line-height:1.5;color:var(--muted)}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.points li{position:relative;padding-left:22px;color:var(--muted);font-size:15px;line-height:1.6}
+.points li:before{content:'';position:absolute;left:0;top:.65em;width:8px;height:2px;background:var(--accent)}
+#experience .card>.points{grid-column:2;grid-row:1/span 2}
+.skill-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.skill-group{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px 28px;transition:transform .3s,box-shadow .3s}
+.skill-group:hover{transform:translateY(-4px);box-shadow:0 14px 28px #172b3e12}
+.skill-group h3{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{background:#eef4f3;color:var(--navy);font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
+.chips li:hover{background:var(--accent);color:#fff}
+.nav a.active:not(:last-child){color:var(--accent);box-shadow:0 2px 0 var(--accent)}
+.section>p.lead{max-width:760px}
+@keyframes drift{from{transform:translateY(0)}to{transform:translateY(-18px)}}
+.hero:after{animation:drift 6s ease-in-out infinite alternate}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px #a5d4d233}50%{box-shadow:0 0 0 9px #a5d4d200}}
+.status-dot{animation:pulse 2.4s ease-in-out infinite}
+.js-reveal .section>*,.js-reveal .card,.js-reveal .highlight,.js-reveal .skill-group,.js-reveal .hero>*{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+.js-reveal .in{opacity:1!important;transform:none!important}
+.js-reveal .highlight.in:hover,.js-reveal .skill-group.in:hover{transform:translateY(-4px)!important}
+@media(max-width:900px){.highlights{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.skill-groups{grid-template-columns:1fr}#experience .card>.points{margin-top:6px}}
+@media(max-width:460px){.highlights{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.js-reveal *{opacity:1!important;transform:none!important}.hero:after,.status-dot{animation:none}}
+#experience.section.container{padding-left:max(48px,calc((100vw - var(--max))/2));padding-right:max(48px,calc((100vw - var(--max))/2))}
+@media(max-width:900px){#experience.section.container{padding-left:24px;padding-right:24px}}

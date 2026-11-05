@@ -19,3 +19,40 @@ if (menuBtn && nav) {
     });
   });
 }
+
+const revealTargets = document.querySelectorAll(
+  ".section > *, .card, .highlight, .skill-group, .hero > *"
+);
+if ("IntersectionObserver" in window) {
+  document.documentElement.classList.add("js-reveal");
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  revealTargets.forEach((el, i) => {
+    el.style.setProperty("--d", `${(i % 4) * 90}ms`);
+    io.observe(el);
+  });
+
+  const links = [...document.querySelectorAll(".nav a")];
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          links.forEach((a) =>
+            a.classList.toggle("active", a.getAttribute("href") === `#${entry.target.id}`)
+          );
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+  );
+  document.querySelectorAll("main section[id]").forEach((s) => spy.observe(s));
+}
