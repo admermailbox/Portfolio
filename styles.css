@@ -163,3 +163,24 @@ h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
 .lead{text-wrap:balance}
 .date{white-space:nowrap}
 @media(max-width:700px){.muted .sep{display:none}.muted .date{display:block;margin-top:2px}}
+.icon{flex:none;display:inline-block;vertical-align:-3px}
+.btn .icon{transition:transform .2s}
+.btn:hover .icon{transform:translateX(3px)}
+.footer-wrap a{display:inline-flex;align-items:center;gap:6px}
+.footer-wrap a:hover .icon{transform:translateY(-2px)}
+.footer-wrap .icon{transition:transform .2s}
+.menu-btn{line-height:0}
+#top{display:block;height:0;scroll-margin-top:0}
+
+/* Keep short labels on one line on phones */
+@media(max-width:700px){
+  .eyebrow{font-size:clamp(8.5px,2.7vw,11px);letter-spacing:.1em;gap:10px;white-space:nowrap}
+  .hero-bottom{gap:6px 14px;letter-spacing:.1em}
+  .hero-bottom span{white-space:nowrap}
+  .hero-bottom span+span:before{margin-right:14px}
+  .section-label{white-space:nowrap}
+  .btn{white-space:nowrap}
+  .logo{font-size:16px}
+  .chips li{white-space:nowrap}
+}
+@media(max-width:460px){.hero-bottom{flex-direction:row;flex-wrap:wrap}.hero-bottom span+span:before{display:inline}}
