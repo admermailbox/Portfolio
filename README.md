@@ -1,4 +1,4 @@
-# Admer Serojales — Audit & Accounting Portfolio
+# Admer Serojales - Audit & Accounting Portfolio
 
 A professional portfolio for Admer Serojales, covering financial audit, IT audit, inventory audit, accounting, and internal controls.
 
@@ -10,9 +10,9 @@ https://admermailbox.github.io/Portfolio/
 
 ## Files
 
-- `index.html` — portfolio content
-- `styles.css` — design and responsive layout
-- `script.js` — mobile navigation and footer
+- `index.html` - portfolio content
+- `styles.css` - design and responsive layout
+- `script.js` - mobile navigation and footer
 
 ## Privacy
 
