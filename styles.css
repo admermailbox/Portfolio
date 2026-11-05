@@ -119,3 +119,14 @@ h1,h2,h3{font-family:Manrope,sans-serif}
 .contact-list a:hover{color:#b6d8d9}
 #contact .btn{color:var(--navy)!important}
 @media(max-width:460px){.contact-list li{flex-direction:column;gap:4px}}
+
+/* Hero portrait blended into the navy background */
+.hero-photo{position:absolute;right:max(48px,calc((100vw - var(--max))/2 + 40px));top:50%;transform:translateY(-54%);width:clamp(300px,31vw,430px);aspect-ratio:1;margin:0;z-index:0;border-radius:50%;overflow:hidden;box-shadow:0 0 0 1px #ffffff26,0 0 0 14px #ffffff0d,0 30px 70px #0000004d}
+.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:saturate(.9) contrast(1.03)}
+.hero-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,#2d708240,#10273a8c);mix-blend-mode:multiply;pointer-events:none}
+.hero-photo:before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 50% 45%,transparent 52%,#10273acc 100%);pointer-events:none}
+.js-reveal .hero>.hero-photo{transform:translateY(-54%) scale(.94)}
+.js-reveal .hero>.hero-photo.in{transform:translateY(-54%) scale(1)!important}
+@media(max-width:1000px){.hero h1,.subtitle{max-width:58%}.hero-photo{width:clamp(240px,34vw,320px)}}
+@media(max-width:700px){.hero-photo{position:relative;right:auto;top:auto;transform:none;width:170px;margin:0 0 28px;order:-1}.js-reveal .hero>.hero-photo,.js-reveal .hero>.hero-photo.in{transform:none!important}.hero h1,.subtitle{max-width:none}}
+@media(min-width:1001px){.hero h1{max-width:min(890px,58%)}.subtitle{max-width:min(680px,50%)}.hero:after{display:none}}
