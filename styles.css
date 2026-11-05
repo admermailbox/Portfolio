@@ -130,3 +130,14 @@ h1,h2,h3{font-family:Manrope,sans-serif}
 @media(max-width:1000px){.hero h1,.subtitle{max-width:58%}.hero-photo{width:clamp(240px,34vw,320px)}}
 @media(max-width:700px){.hero-photo{position:relative;right:auto;top:auto;transform:none;width:170px;margin:0 0 28px;order:-1}.js-reveal .hero>.hero-photo,.js-reveal .hero>.hero-photo.in{transform:none!important}.hero h1,.subtitle{max-width:none}}
 @media(min-width:1001px){.hero h1{max-width:min(890px,58%)}.subtitle{max-width:min(680px,50%)}.hero:after{display:none}}
+
+/* Contact card */
+.contact-card{max-width:560px;margin:0 auto 32px;padding:8px 32px 12px;text-align:left;background:#ffffff0d;border:1px solid #ffffff22;border-radius:10px}
+.contact-head{display:flex;flex-direction:column;gap:2px;padding:22px 0 18px;border-bottom:1px solid #ffffff22}
+.contact-head strong{font:700 22px/1.3 Manrope,sans-serif;color:#fff;letter-spacing:-.02em}
+.contact-head span{font-size:13px;color:#b6d8d9;font-weight:600}
+.contact-card .contact-list{max-width:none;margin:0;gap:0}
+.contact-card .contact-list li{align-items:baseline;padding:16px 0}
+.contact-card .contact-list li:last-child{border-bottom:0}
+.contact-list em{font-style:normal;font-size:11px;color:#9ab4bc;margin-left:10px;letter-spacing:.08em}
+.contact-list address{font-style:normal;line-height:1.7;color:#d1e0e3}
