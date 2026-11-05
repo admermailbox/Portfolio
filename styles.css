@@ -112,3 +112,10 @@ h1,h2,h3{font-family:Manrope,sans-serif}
 @media(prefers-reduced-motion:reduce){.js-reveal *{opacity:1!important;transform:none!important}.hero:after,.status-dot{animation:none}}
 #experience.section.container{padding-left:max(48px,calc((100vw - var(--max))/2));padding-right:max(48px,calc((100vw - var(--max))/2))}
 @media(max-width:900px){#experience.section.container{padding-left:24px;padding-right:24px}}
+.contact-list{list-style:none;margin:0 auto 32px;padding:0;max-width:560px;display:grid;gap:12px;text-align:left}
+.contact-list li{display:flex;gap:20px;padding:14px 0;border-bottom:1px solid #ffffff22;color:#d1e0e3}
+.contact-list li>span{flex:0 0 84px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#9ab4bc;padding-top:3px}
+.contact-list a{color:#fff;font-weight:600}
+.contact-list a:hover{color:#b6d8d9}
+#contact .btn{color:var(--navy)!important}
+@media(max-width:460px){.contact-list li{flex-direction:column;gap:4px}}

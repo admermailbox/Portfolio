@@ -16,7 +16,7 @@ https://admermailbox.github.io/Portfolio/
 
 ## Privacy
 
-This public website does not include private character references, their contact information, or personal phone numbers.
+This public website lists the owner's own email, phone number, and city by request. It does not include third-party references or their contact details.
 
 ## Updates
 
