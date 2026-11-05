@@ -159,3 +159,7 @@ h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   .hero-bottom{font-size:10.5px}
 }
 @media(max-width:1000px){.hero:after{display:none}}
+.lead,.subtitle,.points li,.highlight span{text-wrap:pretty}
+.lead{text-wrap:balance}
+.date{white-space:nowrap}
+@media(max-width:700px){.muted .sep{display:none}.muted .date{display:block;margin-top:2px}}
