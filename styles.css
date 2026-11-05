@@ -122,9 +122,9 @@ h1,h2,h3{font-family:Manrope,sans-serif}
 
 /* Hero portrait blended into the navy background */
 .hero-photo{position:absolute;right:max(48px,calc((100vw - var(--max))/2 + 40px));top:50%;transform:translateY(-54%);width:clamp(300px,31vw,430px);aspect-ratio:1;margin:0;z-index:0;border-radius:50%;overflow:hidden;box-shadow:0 0 0 1px #ffffff26,0 0 0 14px #ffffff0d,0 30px 70px #0000004d}
-.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:saturate(.9) contrast(1.03)}
-.hero-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,#2d708240,#10273a8c);mix-blend-mode:multiply;pointer-events:none}
-.hero-photo:before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 50% 45%,transparent 52%,#10273acc 100%);pointer-events:none}
+.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:none}
+.hero-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,#2d70820d,#10273a1a);pointer-events:none}
+.hero-photo:before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 50% 45%,transparent 78%,#10273a55 100%);pointer-events:none}
 .js-reveal .hero>.hero-photo{transform:translateY(-54%) scale(.94)}
 .js-reveal .hero>.hero-photo.in{transform:translateY(-54%) scale(1)!important}
 @media(max-width:1000px){.hero h1,.subtitle{max-width:58%}.hero-photo{width:clamp(240px,34vw,320px)}}
